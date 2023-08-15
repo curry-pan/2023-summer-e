@@ -27,25 +27,25 @@ function initMap() {
   ];
     
   const singida = [
-    new google.maps.LatLng(40.926427, 139.464355),
-    new google.maps.LatLng(40.057282, 139.662109),
-    new google.maps.LatLng(40.122696, 139.750000),
-    new google.maps.LatLng(40.209900, 139.771973),
-    new google.maps.LatLng(40.471411, 139.750000),
-    new google.maps.LatLng(40.536764, 139.793945),
-    new google.maps.LatLng(40.536764, 139.969727)
+    new google.maps.LatLng(35.4191981, 139.5984126),
+    new google.maps.LatLng(35.4194622, 139.5986164),
+    new google.maps.LatLng(35.4190029, 139.5998846),
+    new google.maps.LatLng(35.4183205, 139.6002201),
+    new google.maps.LatLng(35.4184467, 139.6008824),
+    new google.maps.LatLng(35.4194375, 139.6001506),
+    new google.maps.LatLng(35.4195942, 139.5993785),
   ];
     // Construct the polygon.
-    const bermudaTriangle = new google.maps.Polygon({
+    const dangerZone = new google.maps.Polygon({
         paths: triangleCoords,
-        strokeColor: "#FF0000",
+        strokeColor: "#FFDD00",
         strokeOpacity: 0.8,
-        strokeWeight: 0,
-        fillColor: "#FF0000",
+        strokeWeight: 2,
+        fillColor: "#FFFF00",
         fillOpacity: 0.35,
         map:map
     });
-    const bermudaTriangle2 = new google.maps.Polygon({
+    const deadlyZone = new google.maps.Polygon({
       paths: singida,
       strokeColor: "#FF0000",
       strokeOpacity: 0.8,
@@ -55,35 +55,6 @@ function initMap() {
       map:map
   });
   
-    bermudaTriangle.setMap(map);
+ // dangerZone.setMap(map);
 }
 window.initMap = initMap;
-
-  
-  //a
-//   const Tabora = [
-//   new google.maps.LatLng(-4.127285, 31.684570),
-//   new google.maps.LatLng(-4.236856, 31.684570),
-//   new google.maps.LatLng(-4.258768, 31.508789),
-//   new google.maps.LatLng(-4.236856, 31.486816),
-//   new google.maps.LatLng(-4.302591, 31.464844),
-//   new google.maps.LatLng(-4.477856, 31.420898),
-//   new google.maps.LatLng(-4.631179, 31.464844)];
-  
-//   const polygon1 = new google.maps.Polygon({
-//       path: singida,
-//       geodesic: false,
-//       strokeColor: '#FF0000',
-//       strokeOpacity: 1.0,
-//       strokeWeight: 1,
-//       map: map
-//   });
-  
-//   const polygon2 = new google.maps.Polygon({
-//       path: Tabora,
-//       geodesic: false,
-//       strokeColor: '#FF0000',
-//       strokeOpacity: 1.0,
-//       strokeWeight: 1,
-//       map: map
-//   });
