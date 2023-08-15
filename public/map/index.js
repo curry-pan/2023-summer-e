@@ -6,7 +6,7 @@ function initMap() {
     mapTypeId: "terrain",
   });
   // Define the LatLng coordinates for the polygon's path.
-  const triangleCoords = [
+  const yellow = [
     new google.maps.LatLng(35.419213, 139.5977589),
     new google.maps.LatLng(35.419213, 139.5977589),
     new google.maps.LatLng(35.419213, 139.5977589),
@@ -16,17 +16,14 @@ function initMap() {
     new google.maps.LatLng(35.4190029, 139.5998846),
     new google.maps.LatLng(35.4183205, 139.6002201),
     new google.maps.LatLng(35.4184467, 139.6008824),
-    new google.maps.LatLng(35.4194375, 139.6001506),
-    new google.maps.LatLng(35.4195942, 139.5993785),
-    new google.maps.LatLng(35.4208771, 139.59972),
-    new google.maps.LatLng(35.4209209, 139.59912),
-    new google.maps.LatLng(35.4201854, 139.5989909),
-    new google.maps.LatLng(35.4202544, 139.5980647),
-    new google.maps.LatLng(35.420836, 139.5979097),
-    new google.maps.LatLng(35.4207548, 139.5977917)
+    new google.maps.LatLng(35.41744249182248, 139.60044365502725),
+    new google.maps.LatLng(35.41733900623941, 139.60091699244495),
+    new google.maps.LatLng(35.41770310687166, 139.60138766791263)
+    // new google.maps.LatLng(35.41744249182248, 139.60044365502725),
+    // new google.maps.LatLng(35.41733900623941, 139.60091699244495)
   ];
     
-  const singida = [
+  const red = [
     new google.maps.LatLng(35.4191981, 139.5984126),
     new google.maps.LatLng(35.4194622, 139.5986164),
     new google.maps.LatLng(35.4190029, 139.5998846),
@@ -37,7 +34,7 @@ function initMap() {
   ];
     // Construct the polygon.
     const dangerZone = new google.maps.Polygon({
-        paths: triangleCoords,
+        paths: yellow,
         strokeColor: "#FFDD00",
         strokeOpacity: 0.8,
         strokeWeight: 2,
